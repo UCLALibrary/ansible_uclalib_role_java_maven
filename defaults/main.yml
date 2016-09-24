@@ -1,0 +1,9 @@
+---
+# Define the major version of Apache Maven to download (e.g. 1, 2, 3)
+maven_major_version: 3
+
+# Define the version of Apache Maven to download
+# Will obtain from this URL:
+# http://archive.apache.org/dist/maven/maven-{{ maven_major_version }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz
+maven_version: 3.0.5
+

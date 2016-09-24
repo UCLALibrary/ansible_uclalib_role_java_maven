@@ -1,0 +1,19 @@
+---
+
+- name: Determine if Maven needs to be downloaded/unarchived
+  stat: path=/usr/local/apache-maven-{{ maven_version }}
+  register: maven_path
+
+- name: Download Maven into /usr/local directory
+  get_url: url=http://archive.apache.org/dist/maven/maven-{{ maven_major_version }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz dest=/usr/local/apache-maven-{{ maven_version }}-bin.tar.gz
+  when: maven_path.stat.exists == False
+
+- name: Unpack Maven Download
+  unarchive: src=/usr/local/apache-maven-{{ maven_version }}-bin.tar.gz dest=/usr/local copy=no
+  when: maven_path.stat.exists == False
+
+- name: Create symbolic link for the MAVEN_HOME directory
+  file: src=/usr/local/apache-maven-{{ maven_version }} dest={{ maven_home }} state=link
+
+- name: set up the environment profile for Maven in /etc/profile.d
+  template: src=maven_env.j2 dest="/etc/profile.d/maven.env.sh"
