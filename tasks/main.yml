@@ -23,6 +23,6 @@
 
 - name: Copy Maven completion file
   copy:
-    src: "maven-completion.bash"
+    src: "maven_completion.bash"
     dest: "/etc/bash_completion.d/maven"
     mode: 0755
