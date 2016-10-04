@@ -17,3 +17,12 @@
 
 - name: set up the environment profile for Maven in /etc/profile.d
   template: src=maven_env.j2 dest="/etc/profile.d/maven.env.sh"
+
+- name: install bash-completion package
+  yum: name=bash-completion state=latest
+
+- name: Copy Maven completion file
+  copy:
+    src: "maven-completion.bash"
+    dest: "/etc/bash_completion.d/maven"
+    mode: 0755
