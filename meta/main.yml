@@ -1,0 +1,15 @@
+---
+
+galaxy_info:
+  author: Hardy Pottinger
+  description: Ansible role to install Apache Maven
+  license: BSD 3-Clause
+  min_ansible_version: 1.2
+  platforms:
+  - name: EL
+    versions:
+    - 6
+  categories:
+  - system
+dependencies:
+  - { role: ansible_uclalib_role_java }
