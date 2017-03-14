@@ -12,4 +12,4 @@ galaxy_info:
   categories:
   - system
 dependencies:
-  - { role: uclalib_role_java }
+  - { role: ansible_uclalib_role_java }
