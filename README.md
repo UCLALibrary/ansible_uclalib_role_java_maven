@@ -1,4 +1,4 @@
-UCLALib Ansible Role: Java: Maven
+UCLALib Ansible Role: Java: Maven [![Build Status](https://travis-ci.org/UCLALibrary/uclalib_role_java_maven.svg?branch=master)](https://travis-ci.org/UCLALibrary/uclalib_role_java_maven)
 =========
 
 Installs Apache Maven, a Java-based software build tool.
@@ -32,4 +32,3 @@ License
 -------
 
 BSD
-
