@@ -11,5 +11,5 @@ galaxy_info:
     - 6
   categories:
   - system
-dependencies:
-  - { role: uclalib_role_java }
+#dependencies:
+#  - { role: uclalib_role_java }
